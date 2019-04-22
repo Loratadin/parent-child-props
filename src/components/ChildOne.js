@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Parent extends Component {
+export default class ChildOne extends Component {
     render() {
         return (
             <div className="header__wrapper">
