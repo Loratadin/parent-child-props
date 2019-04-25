@@ -1,0 +1,15 @@
+.widget__wrapper {
+    position: absolute;
+    right: 0;
+    transform: translate3d(0, -125%, 0);
+    transition: all 0.3 ease-in-out;
+}
+.widget__wrapper-visible {
+    transform: translate3d(0, 0, 0);
+}
+.widget__map-wrap {
+    width: 500px;
+}
+.widget__map-image {
+    width: 100%;
+}
