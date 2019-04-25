@@ -1,8 +1,8 @@
 .widget__wrapper {
     position: absolute;
     right: 0;
-    transform: translate3d(0, -125%, 0);
-    transition: all 0.3 ease-in-out;
+    transform: translate3d(-30%, -125%, 0);
+    transition: all 0.7s ease-in-out; 
 }
 .widget__wrapper-visible {
     transform: translate3d(0, 0, 0);
