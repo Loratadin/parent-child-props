@@ -7,7 +7,7 @@ export default class Parent extends Component {
         isMapVisible: false,
     }
     toggleMap = () => {
-        this.state.isMapVisible === false ? this.setState({isMapVisible: true}) : this.setState({isMapVisible: false})
+        this.setState({isMapVisible: !this.state.isMapVisible})
     }
 
     render() {
