@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChildOne from './ChildOne';
 import ChildTwo from './ChildTwo';
+import ChildThree from './ChildThree';
 
 export default class Parent extends Component {
     state = {
@@ -15,6 +16,7 @@ export default class Parent extends Component {
             <div className="parent__container">
                 <ChildOne toggleMap={this.toggleMap} />
                 <ChildTwo isMapVisible={this.state.isMapVisible} />
+                <ChildThree />
             </div>
         )
     }
