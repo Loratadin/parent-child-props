@@ -2,3 +2,30 @@
     width: 100%;
     position: relative;
 }
+.report__preview-container {
+    width: 210px;
+}
+.view-button {
+    color: #a4a4a4;
+    background: #3498eb;
+    margin: 0 0 10px 0;
+    box-shadow: none;
+    outline: none;
+    &:hover {
+      font-weight: 700;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background: #34abeb;
+    }
+}
+.report__thumbnail-wrap {
+    width: 100%;
+    height: 250px;
+}
+.report__thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
