@@ -36,7 +36,7 @@ export default class Parent extends Component {
         return (
             <div className="parent__container">
                 {isReportVisible ? (
-                    <ChildThree childThreeCallback={cb => this.reportCallback = cb} reportDataSource={this.reportDataSource}/>
+                        <ChildThree childThreeCallback={cb => this.reportCallback = cb} reportDataSource={this.reportDataSource}/>
                 ) : (
                     <React.Fragment>
                         <ChildOne toggleMap={this.toggleMap} />

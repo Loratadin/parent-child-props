@@ -15,6 +15,8 @@ export default class ChildThree extends Component {
     doc = {
         background: "#fff",
         width: "100%",
+        margin: "0 auto",
+        maxWidth: "1000px",
         minHeight: "842px",
         padding: "25px",
         letterSpacing: "1px",
@@ -33,7 +35,7 @@ export default class ChildThree extends Component {
     return (
       <div id="report" style={this.doc}>
         <div style={this.header}>
-          <div style={this.logogWrap}>
+          <div style={this.logoWrap}>
             <img
               style={this.logo}
               src="./assets/placeholder.png"
