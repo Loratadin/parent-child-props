@@ -31,12 +31,19 @@ export default class Parent extends Component {
         this.setState({ isReportVisible: true });
     }
 
+    handleGoBack = () => {
+        this.setState({ isReportVisible: false });
+    }
+
     render() {
         const { isMapVisible, isReportVisible } = this.state;
         return (
             <div className="parent__container">
                 {isReportVisible ? (
-                        <ChildThree childThreeCallback={cb => this.reportCallback = cb} reportDataSource={this.reportDataSource}/>
+                    <ChildThree
+                        childThreeCallback={cb => this.reportCallback = cb} reportDataSource={this.reportDataSource}
+                        handleGoBack={this.handleGoBack}
+                    />
                 ) : (
                     <React.Fragment>
                         <ChildOne toggleMap={this.toggleMap} />

@@ -1,3 +1,20 @@
 .imageForPrint {
     display: none;
 }
+.report__wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.report__buttons-container {
+    display: flex;
+}
+.report__back-btn,
+.report__print-btn {
+    margin: 20px 40px 20px 0;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    width: 80px;
+}
