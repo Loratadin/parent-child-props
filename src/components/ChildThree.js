@@ -4,10 +4,12 @@ import { Bar } from "react-chartjs-2";
 export default class ChildThree extends Component {
   constructor(props) {
     super(props);
-    props.childThreeCallback(() => {
-      this.setState({
-        chartAsBase64: this.barChartReference ? this.barChartReference.chartInstance.toBase64Image() : ""
-      });
+      props.childThreeCallback(() => {
+        setTimeout(() => {
+            this.setState({
+                chartAsBase64: this.barChartReference.chartInstance.toBase64Image()
+            });
+    }, 100);
     });
   }
   state = {};
@@ -34,12 +36,12 @@ export default class ChildThree extends Component {
 
   render() {
     const { chartAsBase64 } = this.state;
-    const { reportDataSource, handleGoBack } = this.props;
+    const { reportDataSource, handleGoBack, handlePrint, visible } = this.props;
     return (
-        <div className="report__wrapper">
+        <div className={`report-hidden ${visible && "report-visible"} `}>
             <div className="report__buttons-container">
                 <button onClick={() => handleGoBack()} className="report__back-btn">Go Back</button>
-                <button className="report__print-btn">Print</button>
+                <button onClick={() => handlePrint()} className="report__print-btn">Print</button>
             </div>
             <div id="report" style={this.doc}>
             <div style={this.header}>

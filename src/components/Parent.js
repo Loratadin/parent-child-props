@@ -35,16 +35,34 @@ export default class Parent extends Component {
         this.setState({ isReportVisible: false });
     }
 
+    handlePrint = () => {
+        const component = document.getElementById("report");
+        document.getElementById("canvasChart").style.display = "none";
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute("title", "report");
+        iframe.setAttribute("id","report");
+        iframe.setAttribute("style", "height: 0px; width: 0px; position: absolute;");
+        document.body.appendChild(iframe);
+        const content = iframe.contentWindow;
+        content.document.open();
+        content.document.write(component.innerHTML);
+        content.document.close();
+        content.focus();
+        content.print();
+       document.getElementById("canvasChart").style.display = "block";
+    }
+
     render() {
         const { isMapVisible, isReportVisible } = this.state;
         return (
             <div className="parent__container">
-                {isReportVisible ? (
-                    <ChildThree
-                        childThreeCallback={cb => this.reportCallback = cb} reportDataSource={this.reportDataSource}
-                        handleGoBack={this.handleGoBack}
-                    />
-                ) : (
+                <ChildThree
+                    visible={isReportVisible}
+                    childThreeCallback={cb => this.reportCallback = cb} reportDataSource={this.reportDataSource}
+                    handleGoBack={this.handleGoBack}
+                    handlePrint={this.handlePrint}
+                />
+                {!isReportVisible && (
                     <React.Fragment>
                         <ChildOne toggleMap={this.toggleMap} />
                         <ChildTwo isMapVisible={isMapVisible} />
