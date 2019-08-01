@@ -68,7 +68,7 @@ export default class ChildThree extends Component {
                 <img
                 src={chartAsBase64}
                 alt="chart"
-                className="imageForPrint"
+                className="image-for-print"
                 style={this.base64}
                 />
             )}
