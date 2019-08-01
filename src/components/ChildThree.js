@@ -29,8 +29,8 @@ export default class ChildThree extends Component {
     padding: "0 20px"
   };
   h2 = { color: "#a4a4a4", fontWeight: 700, letterSpacing: "2px" };
-  logoWrap = { width: "250px", height: "80px" };
-  logo = { width: "100%" };
+  logoWrap = { width: "200px", height: "40px" };
+  logo = { width: "100%", height: "100%", objectFit: "cover" };
   hr = { background: "#a4a4a4" };
   base64 = { width: "100%" };
 
